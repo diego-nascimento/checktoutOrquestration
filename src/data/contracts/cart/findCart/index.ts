@@ -1,4 +1,4 @@
-import { cartTypes } from '../../../../domain/protocols/cartTypes'
+import { cartTypes } from '../../../../domain/models/cartTypes'
 
 export namespace findCartInfra {
   export type params = {

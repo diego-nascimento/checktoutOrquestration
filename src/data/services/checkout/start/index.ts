@@ -1,6 +1,6 @@
 import { findCartInfra } from '../../../contracts/cart/findCart'
 import { StartCheckoutDomain } from '../../../../domain/features/checkout/start'
-import { CheckoutObjectDTO } from '../../../../domain/models/checkoutObject'
+import { CheckoutObjectDTO } from '../../../../domain/entities/checkoutObject'
 import { checkoutIsInProgressInfra } from '../../../contracts/checkoutObject/checkIsInProgress'
 import { SaveCheckoutInfra } from '../../../contracts/checkoutObject/save'
 

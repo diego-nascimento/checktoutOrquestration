@@ -1,4 +1,4 @@
-import { checkoutObject } from '../../../../domain/protocols/checkoutObject'
+import { checkoutObject } from '../../../../domain/models/checkoutObject'
 
 export namespace checkoutIsInProgressInfra {
   export type params = {
