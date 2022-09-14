@@ -116,4 +116,61 @@ describe('StartCheckoutData tests', () => {
       }
     })
   })
+
+  it('Deve rethrow o throw seguindo se se alguma saveCheckout throws', async () => {
+    saveCheckout.perform.mockImplementationOnce(() => {
+      throw new Error('Test Error')
+    })
+    const promise = sut.perform({
+      cartId: 'any_cartId'
+    })
+
+    expect(promise).rejects.toThrow()
+  })
+
+  it('Deve rethrow o throw seguindo se se alguma findCartInfra throws', async () => {
+    findCartInfra.perform.mockImplementationOnce(() => {
+      throw new Error('Test Error')
+    })
+    const promise = sut.perform({
+      cartId: 'any_cartId'
+    })
+
+    expect(promise).rejects.toThrow()
+  })
+
+  it('Deve rethrow o throw seguindo se se alguma checkoutIsInProgress throws', async () => {
+    checkoutIsInProgress.perform.mockImplementationOnce(() => {
+      throw new Error('Test Error')
+    })
+    const promise = sut.perform({
+      cartId: 'any_cartId'
+    })
+
+    expect(promise).rejects.toThrow()
+  })
+  it('Deve retornar um checkoutObject se  saveCheckout salvar corretamente', async () => {
+    saveCheckout.perform.mockResolvedValueOnce({
+      id: 'any_id',
+      checkoutReady: false,
+      deliveryAddress: undefined,
+      deliveryMethod: undefined,
+      paymentMethod: undefined,
+      state: 'initial',
+      cart: {} as cartTypes
+    })
+    const response = await sut.perform({
+      cartId: 'any_cartId'
+    })
+
+    expect(response).toEqual({
+      id: 'any_id',
+      checkoutReady: false,
+      deliveryAddress: undefined,
+      deliveryMethod: undefined,
+      paymentMethod: undefined,
+      state: 'initial',
+      cart: {} as cartTypes
+    })
+  })
 })

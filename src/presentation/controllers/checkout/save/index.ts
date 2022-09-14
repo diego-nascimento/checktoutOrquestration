@@ -1,13 +1,13 @@
 import { StartCheckoutDomain } from '../../../../domain/features/checkout/start'
-import { error400 } from '../../../errors/400Error'
-import { error404 } from '../../../errors/404Error'
-import { error500 } from '../../../errors/500Error'
-import { success } from '../../../errors/Success'
+import { error400 } from '../../../handleHttpResponses/400Error'
+import { error404 } from '../../../handleHttpResponses/404Error'
+import { error500 } from '../../../handleHttpResponses/500Error'
+import { createsuccessfully } from '../../../handleHttpResponses/201createsuccessfully'
 import { ControllerProtocol } from '../../../protocols/controllerProtocols'
 import { httpRequest, httpResponse } from '../../../protocols/httpProtocols'
 
 export class SaveCheckoutPresentation implements ControllerProtocol {
-  private readonly fields: string[] = ['cartId']
+  private readonly fields = ['cartId']
 
   constructor (
     private readonly createCheckout: StartCheckoutDomain
@@ -21,12 +21,9 @@ export class SaveCheckoutPresentation implements ControllerProtocol {
       }
       const result = await this.createCheckout.perform(body)
       if (!result) return error404('Cart not founded')
-      return success<StartCheckoutDomain.Result>(result)
+      return createsuccessfully<StartCheckoutDomain.Result>(result)
     } catch (error) {
-      if (error instanceof Error) {
-        return error500(error.message)
-      }
-      return error500('Something went wrong')
+      return error500((error as Error).message)
     }
   }
 }
