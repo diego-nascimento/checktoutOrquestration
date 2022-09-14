@@ -12,7 +12,7 @@ type constructorParams = {
 }
 
 export class CheckoutObjectDTO {
-  checkout: checkoutObject
+  private checkout: checkoutObject
 
   constructor (data: constructorParams) {
     this.checkout = {
