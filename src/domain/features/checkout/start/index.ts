@@ -1,4 +1,4 @@
-import { checkoutObject } from '../../protocols/checkoutObject'
+import { checkoutObject } from '../../../protocols/checkoutObject'
 
 export namespace StartCheckoutDomain {
   export type Params = {

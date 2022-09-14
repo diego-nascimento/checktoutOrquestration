@@ -1,7 +1,7 @@
 import { StartCheckoutData } from '.'
 
 import { mock, MockProxy } from 'jest-mock-extended'
-import { StartCheckoutDomain } from '../../../domain/features/start'
+import { StartCheckoutDomain } from '../../../domain/features/checkout/start'
 import { checkoutIsInProgressDomain } from '../../contracts/checkoutObject/checkIsInProgress'
 import { findCartInfra } from '../../../domain/features/cart/findCart'
 import { SaveCheckoutInfra } from '../../contracts/checkoutObject/save'
