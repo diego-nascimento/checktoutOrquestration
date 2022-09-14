@@ -1,2 +1,5 @@
+import { Server } from '../infra/libs/express'
 
-console.log('Server Running')
+const server = new Server()
+
+server.init(8081)

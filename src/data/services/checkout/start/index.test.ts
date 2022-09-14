@@ -55,6 +55,7 @@ describe('StartCheckoutData tests', () => {
       deliveryMethod: {} as deliveryMethodsTypes,
       paymentMethod: {} as paymentMethodTypes,
       cart: {} as cartTypes
+
     })
     const result = await sut.perform({
       cartId: 'any_cartId'
@@ -66,7 +67,11 @@ describe('StartCheckoutData tests', () => {
       deliveryMethod: {},
       paymentMethod: {},
       state: 'ready',
-      cart: {} as cartTypes
+      cart: {} as cartTypes,
+      nextStep: {
+        endPoint: '/ready',
+        method: 'POST'
+      }
     })
   })
 
@@ -112,6 +117,10 @@ describe('StartCheckoutData tests', () => {
           total: 40
         },
         checkoutReady: false,
+        nextStep: {
+          endPoint: '/address',
+          method: 'POST'
+        },
         state: 'initial'
       }
     })

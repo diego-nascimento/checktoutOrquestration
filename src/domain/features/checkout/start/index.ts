@@ -6,7 +6,6 @@ export namespace StartCheckoutDomain {
   }
 
   export type Result = checkoutObject | null
-
 }
 
 export interface StartCheckoutDomain {

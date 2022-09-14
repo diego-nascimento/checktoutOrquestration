@@ -7,6 +7,11 @@ export type stateTypes = 'initial' | 'delivery' | 'payment' | 'ready'
 
 export type paymentMethodTypes = billingTypes | creditCardTypes | undefined
 
+export type nextStep = {
+  endPoint: string
+  method: 'POST'
+}
+
 export interface checkoutObject {
   id?: string
   cart: cartTypes
@@ -15,4 +20,5 @@ export interface checkoutObject {
   paymentMethod?: paymentMethodTypes
   state?: stateTypes
   checkoutReady?: boolean
+  nextStep?:nextStep
 }
