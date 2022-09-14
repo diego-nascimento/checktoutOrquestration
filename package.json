@@ -1,12 +1,11 @@
 {
-  "name": "checkoutOrquestration",
+  "name": "checkout_orquestration",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "yarn tsc",
-    "start": "node dist/src/main/index.js"
+    "start": "yarn tsc && node dist/src/main/index.js"
   },
   "dependencies": {
     "@types/express": "^4.17.14",
