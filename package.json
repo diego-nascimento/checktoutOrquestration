@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "yarn tsc",
+    "start": "node dist/src/main/index.js"
+  },
   "dependencies": {
     "typescript": "^4.8.3"
   },
@@ -19,8 +24,5 @@
     "jest-mock-extended": "^3.0.0-beta1",
     "ts-jest": "^29.0.1",
     "ts-node": "^10.9.1"
-  },
-  "scripts": {
-    "test": "jest"
   }
 }
