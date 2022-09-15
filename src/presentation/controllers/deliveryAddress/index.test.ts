@@ -1,11 +1,11 @@
 import { mock, MockProxy } from 'jest-mock-extended'
 import { DeliverAddressPresentation } from '.'
-import { DeliveryAddressDomain } from '../../../domain/features/ address/deliveryAddress'
-import { cartTypes } from '../../../domain/models/cartTypes'
-import { checkoutObject, stateTypes } from '../../../domain/models/checkoutObject'
-import { error400 } from '../../handleHttpResponses/400Error'
-import { error500 } from '../../handleHttpResponses/500Error'
-import { ControllerProtocol } from '../../protocols/controllerProtocols'
+import { DeliveryAddressDomain } from 'domain/features/ address/deliveryAddress'
+import { cartTypes } from 'domain/models/cartTypes'
+import { checkoutObject, stateTypes } from 'domain/models/checkoutObject'
+import { error400 } from 'presentation/handleHttpResponses/400Error'
+import { error500 } from 'presentation/handleHttpResponses/500Error'
+import { ControllerProtocol } from 'presentation/protocols/controllerProtocols'
 
 describe('deliverAddressPresentation tests', () => {
   let sut: ControllerProtocol

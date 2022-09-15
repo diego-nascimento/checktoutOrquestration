@@ -1,11 +1,11 @@
 import { mock, MockProxy } from 'jest-mock-extended'
 import { SaveCheckoutPresentation } from '.'
-import { StartCheckoutDomain } from '../../../../domain/features/checkout/start'
-import { createsuccessfully } from '../../../handleHttpResponses/201createsuccessfully'
-import { error400 } from '../../../handleHttpResponses/400Error'
-import { error404 } from '../../../handleHttpResponses/404Error'
-import { error500 } from '../../../handleHttpResponses/500Error'
-import { ControllerProtocol } from '../../../protocols/controllerProtocols'
+import { StartCheckoutDomain } from 'domain/features/checkout/start'
+import { createsuccessfully } from 'presentation/handleHttpResponses/201createsuccessfully'
+import { error400 } from 'presentation/handleHttpResponses/400Error'
+import { error404 } from 'presentation/handleHttpResponses/404Error'
+import { error500 } from 'presentation/handleHttpResponses/500Error'
+import { ControllerProtocol } from 'presentation/protocols/controllerProtocols'
 
 describe('SaveCheckoutPresentation tests', () => {
   let sut: ControllerProtocol

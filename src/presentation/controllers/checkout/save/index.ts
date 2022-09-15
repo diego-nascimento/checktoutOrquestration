@@ -1,10 +1,10 @@
-import { StartCheckoutDomain } from '../../../../domain/features/checkout/start'
-import { error400 } from '../../../handleHttpResponses/400Error'
-import { error404 } from '../../../handleHttpResponses/404Error'
-import { error500 } from '../../../handleHttpResponses/500Error'
-import { createsuccessfully } from '../../../handleHttpResponses/201createsuccessfully'
-import { ControllerProtocol } from '../../../protocols/controllerProtocols'
-import { httpRequest, httpResponse } from '../../../protocols/httpProtocols'
+import { StartCheckoutDomain } from 'domain/features/checkout/start'
+import { error400 } from 'presentation/handleHttpResponses/400Error'
+import { error404 } from 'presentation/handleHttpResponses/404Error'
+import { error500 } from 'presentation/handleHttpResponses/500Error'
+import { createsuccessfully } from 'presentation/handleHttpResponses/201createsuccessfully'
+import { ControllerProtocol } from 'presentation/protocols/controllerProtocols'
+import { httpRequest, httpResponse } from 'presentation/protocols/httpProtocols'
 
 export class SaveCheckoutPresentation implements ControllerProtocol {
   private readonly fields = ['cartId']
