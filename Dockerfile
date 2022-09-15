@@ -1,13 +1,14 @@
 FROM node:alpine
 WORKDIR /app
 
-COPY /src .
+COPY /src ./src
 COPY ./package.json .
 COPY ./tsconfig.json .
-RUN apk update && apk add bash
-RUN apk add yarn
-RUN  yarn install
-RUN yarn build
+
+RUN npm install 
+RUN npm run build 
+RUN npm prune --dev
+
 
 
 

@@ -1,4 +1,4 @@
-import { Server } from 'infra/libs/express'
+import { Server } from '@/infra/libs/express'
 
 const server = new Server()
 
