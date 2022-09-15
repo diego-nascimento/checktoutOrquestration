@@ -1,6 +1,6 @@
 import { mock, MockProxy } from 'jest-mock-extended'
 import { DeliverAddressPresentation } from '.'
-import { DeliveryAddressDomain } from '../../../domain/features/checkout/address'
+import { DeliveryAddressDomain } from '../../../domain/features/ address/deliveryAddress'
 import { cartTypes } from '../../../domain/models/cartTypes'
 import { checkoutObject, stateTypes } from '../../../domain/models/checkoutObject'
 import { error400 } from '../../handleHttpResponses/400Error'

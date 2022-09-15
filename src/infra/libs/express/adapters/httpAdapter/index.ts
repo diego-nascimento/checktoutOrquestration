@@ -1,6 +1,6 @@
-import { ControllerProtocol } from '../../../../../presentation/protocols/controllerProtocols'
+import { ControllerProtocol } from 'presentation/protocols/controllerProtocols'
 import { Request, Response } from 'express'
-import { httpRequest } from '../../../../../presentation/protocols/httpProtocols'
+import { httpRequest } from 'presentation/protocols/httpProtocols'
 
 export const httpAdapter = (controller: ControllerProtocol) => {
   return async (request: Request, response: Response) => {

@@ -1,4 +1,4 @@
-import { getDeliveryMethodsInfra } from '../../../data/contracts/deliveryMethods/getDeliveryMethods'
+import { getDeliveryMethodsInfra } from 'data/contracts/deliveryMethods/getDeliveryMethods'
 
 export class GetDeliveryMethodsInfra implements getDeliveryMethodsInfra {
   async perform (data: getDeliveryMethodsInfra.params): Promise<getDeliveryMethodsInfra.result> {

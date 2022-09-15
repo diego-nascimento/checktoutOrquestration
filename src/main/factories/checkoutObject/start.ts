@@ -1,8 +1,8 @@
-import { StartCheckoutData } from '../../../data/services/checkout/start'
-import { FindCartInfra } from '../../../infra/mockedServices/cart/find'
-import { CheckIsInProgress } from '../../../infra/mockedServices/checkoutObjects/checkIsInProgress'
-import { SaveCheckoutObject } from '../../../infra/mockedServices/checkoutObjects/save'
-import { SaveCheckoutPresentation } from '../../../presentation/controllers/checkout/save'
+import { StartCheckoutData } from 'data/services/checkout/start'
+import { FindCartInfra } from 'infra/mockedServices/cart/find'
+import { CheckIsInProgress } from 'infra/mockedServices/checkoutObjects/checkIsInProgress'
+import { SaveCheckoutObject } from 'infra/mockedServices/checkoutObjects/save'
+import { SaveCheckoutPresentation } from 'presentation/controllers/checkout/save'
 
 export const checkoutObjectStartFactory = () => {
   const checkoutIsInProgressInfra = new CheckIsInProgress()

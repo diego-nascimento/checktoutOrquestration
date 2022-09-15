@@ -1,8 +1,9 @@
-import { findCartInfra } from '../../../contracts/cart/findCart'
-import { StartCheckoutDomain } from '../../../../domain/features/checkout/start'
-import { CheckoutObjectDTO } from '../../../../domain/entities/checkoutObject'
-import { checkoutIsInProgressInfra } from '../../../contracts/checkoutObject/checkIsInProgress'
-import { SaveCheckoutInfra } from '../../../contracts/checkoutObject/save'
+import { findCartInfra } from 'data/contracts/cart/findCart'
+import { StartCheckoutDomain } from 'domain/features/checkout/start'
+
+import { checkoutIsInProgressInfra } from 'data/contracts/checkoutObject/checkIsInProgress'
+import { SaveCheckoutInfra } from 'data/contracts/checkoutObject/save'
+import { CheckoutObjectDTO } from 'domain/entities/checkoutObject'
 
 export class StartCheckoutData implements StartCheckoutDomain {
   constructor (

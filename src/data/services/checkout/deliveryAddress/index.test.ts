@@ -1,11 +1,11 @@
 import { mock, MockProxy } from 'jest-mock-extended'
 import { DeliveryAddressData } from '.'
-import { DeliveryAddressDomain } from '../../../../domain/features/checkout/address'
-import { cartTypes } from '../../../../domain/models/cartTypes'
-import { checkoutObject, stateTypes } from '../../../../domain/models/checkoutObject'
-import { checkoutIsInProgressInfra } from '../../../contracts/checkoutObject/checkIsInProgress'
-import { SaveCheckoutInfra } from '../../../contracts/checkoutObject/save'
-import { getDeliveryMethodsInfra } from '../../../contracts/deliveryMethods/getDeliveryMethods'
+import { DeliveryAddressDomain } from 'domain/features/ address/deliveryAddress'
+import { cartTypes } from 'domain/models/cartTypes'
+import { checkoutObject, stateTypes } from 'domain/models/checkoutObject'
+import { checkoutIsInProgressInfra } from 'data/contracts/checkoutObject/checkIsInProgress'
+import { SaveCheckoutInfra } from 'data/contracts/checkoutObject/save'
+import { getDeliveryMethodsInfra } from 'data/contracts/deliveryMethods/getDeliveryMethods'
 
 describe('DeliveryAddressData tests', () => {
   let sut: DeliveryAddressDomain

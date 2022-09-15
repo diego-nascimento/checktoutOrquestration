@@ -1,14 +1,14 @@
 import { StartCheckoutData } from '.'
 
 import { mock, MockProxy } from 'jest-mock-extended'
-import { StartCheckoutDomain } from '../../../../domain/features/checkout/start'
-import { checkoutIsInProgressInfra } from '../../../contracts/checkoutObject/checkIsInProgress'
-import { findCartInfra } from '../../../contracts/cart/findCart'
-import { SaveCheckoutInfra } from '../../../contracts/checkoutObject/save'
-import { addressTypes } from '../../../../domain/models/address'
-import { deliveryMethodsTypes } from '../../../../domain/models/deliveryMethods'
-import { paymentMethodTypes } from '../../../../domain/models/checkoutObject'
-import { cartTypes } from '../../../../domain/models/cartTypes'
+import { StartCheckoutDomain } from 'domain/features/checkout/start'
+import { checkoutIsInProgressInfra } from 'data/contracts/checkoutObject/checkIsInProgress'
+import { findCartInfra } from 'data/contracts/cart/findCart'
+import { SaveCheckoutInfra } from 'data/contracts/checkoutObject/save'
+import { addressTypes } from 'domain/models/address'
+import { deliveryMethodsTypes } from 'domain/models/deliveryMethods'
+import { paymentMethodTypes } from 'domain/models/checkoutObject'
+import { cartTypes } from 'domain/models/cartTypes'
 
 describe('StartCheckoutData tests', () => {
   let sut: StartCheckoutDomain

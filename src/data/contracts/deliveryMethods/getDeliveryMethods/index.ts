@@ -1,5 +1,5 @@
-import { addressTypes } from '../../../../domain/models/address'
-import { deliveryMethodsTypes } from '../../../../domain/models/deliveryMethods'
+import { addressTypes } from 'domain/models/address'
+import { deliveryMethodsTypes } from 'domain/models/deliveryMethods'
 
 export namespace getDeliveryMethodsInfra {
   export type params = {

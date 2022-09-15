@@ -1,11 +1,11 @@
-import { CheckoutObjectDTO } from '../../../../domain/entities/checkoutObject'
-import { DeliveryAddressDomain } from '../../../../domain/features/checkout/address'
-import { addressTypes } from '../../../../domain/models/address'
-import { checkoutObject } from '../../../../domain/models/checkoutObject'
+import { CheckoutObjectDTO } from 'domain/entities/checkoutObject'
+import { DeliveryAddressDomain } from 'domain/features/ address/deliveryAddress'
+import { addressTypes } from 'domain/models/address'
+import { checkoutObject } from 'domain/models/checkoutObject'
 
-import { checkoutIsInProgressInfra } from '../../../contracts/checkoutObject/checkIsInProgress'
-import { SaveCheckoutInfra } from '../../../contracts/checkoutObject/save'
-import { getDeliveryMethodsInfra } from '../../../contracts/deliveryMethods/getDeliveryMethods'
+import { checkoutIsInProgressInfra } from 'data/contracts/checkoutObject/checkIsInProgress'
+import { SaveCheckoutInfra } from 'data/contracts/checkoutObject/save'
+import { getDeliveryMethodsInfra } from 'data/contracts/deliveryMethods/getDeliveryMethods'
 
 export class DeliveryAddressData implements DeliveryAddressDomain {
   constructor (

@@ -1,7 +1,7 @@
 import { error400 } from '../../handleHttpResponses/400Error'
 import { ControllerProtocol } from '../../protocols/controllerProtocols'
 import { httpRequest, httpResponse } from '../../protocols/httpProtocols'
-import { DeliveryAddressDomain } from '../../../domain/features/checkout/address'
+import { DeliveryAddressDomain } from '../../../domain/features/ address/deliveryAddress'
 import { error500 } from '../../handleHttpResponses/500Error'
 
 import { createsuccessfully } from '../../handleHttpResponses/201createsuccessfully'

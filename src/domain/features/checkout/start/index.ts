@@ -1,4 +1,4 @@
-import { checkoutObject } from '../../../models/checkoutObject'
+import { checkoutObject } from 'domain/models/checkoutObject'
 
 export namespace StartCheckoutDomain {
   export type Params = {

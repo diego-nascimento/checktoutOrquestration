@@ -1,8 +1,8 @@
-import { addressTypes } from '../../models/address'
-import { cartTypes } from '../../models/cartTypes'
-import { checkoutObject, nextStep, stateTypes } from '../../models/checkoutObject'
-import { deliveryMethodsTypes } from '../../models/deliveryMethods'
-import { billingTypes, creditCardTypes } from '../../models/payments'
+import { addressTypes } from 'domain/models/address'
+import { cartTypes } from 'domain/models/cartTypes'
+import { checkoutObject, nextStep, stateTypes } from 'domain/models/checkoutObject'
+import { deliveryMethodsTypes } from 'domain/models/deliveryMethods'
+import { billingTypes, creditCardTypes } from 'domain/models/payments'
 
 type constructorParams = {
   cart: cartTypes

@@ -1,6 +1,6 @@
-import { addressTypes } from '../../../models/address'
-import { checkoutObject } from '../../../models/checkoutObject'
-import { deliveryMethodsTypes } from '../../../models/deliveryMethods'
+import { addressTypes } from 'domain/models/address'
+import { checkoutObject } from 'domain/models/checkoutObject'
+import { deliveryMethodsTypes } from 'domain/models/deliveryMethods'
 
 export namespace DeliveryAddressDomain {
   export type params = {

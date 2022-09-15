@@ -1,4 +1,4 @@
-import { findCartInfra } from '../../../../data/contracts/cart/findCart'
+import { findCartInfra } from 'data/contracts/cart/findCart'
 
 export class FindCartInfra implements findCartInfra {
   async perform (data: findCartInfra.params): Promise<findCartInfra.result> {
