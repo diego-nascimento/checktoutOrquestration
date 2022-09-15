@@ -1,4 +1,5 @@
 import express, { Express } from 'express'
+import { handleBadJson } from './midwares/handleBadJson'
 
 import { checkoutRoutes } from './routes/checkout'
 import { deliveryAddressRoutes } from './routes/deliveryAddress'
@@ -15,6 +16,7 @@ export class Server {
 
   private midwares () {
     this.server.use(express.json())
+    this.server.use(handleBadJson)
   }
 
   private routes () {
