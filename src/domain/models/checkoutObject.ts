@@ -3,7 +3,7 @@ import { cartTypes } from './cartTypes'
 import { deliveryMethodsTypes } from './deliveryMethods'
 import { billingTypes, creditCardTypes } from './payments'
 
-export type stateTypes = 'initial' | 'delivery' | 'payment' | 'ready'
+export type stateTypes = 'initial' |'delivery' | 'payment' | 'ready'
 
 export type paymentMethodTypes = billingTypes | creditCardTypes | undefined
 

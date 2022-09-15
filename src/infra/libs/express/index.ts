@@ -1,8 +1,9 @@
 import express, { Express } from 'express'
 
 import { checkoutRoutes } from './routes/checkout'
+import { deliveryAddressRoutes } from './routes/deliveryAddress'
 
-const routes = [checkoutRoutes]
+const routes = [checkoutRoutes, deliveryAddressRoutes]
 export class Server {
   server: Express
 

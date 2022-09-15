@@ -1,0 +1,30 @@
+import { error400 } from '../../handleHttpResponses/400Error'
+import { ControllerProtocol } from '../../protocols/controllerProtocols'
+import { httpRequest, httpResponse } from '../../protocols/httpProtocols'
+import { DeliveryAddressDomain } from '../../../domain/features/checkout/address'
+import { error500 } from '../../handleHttpResponses/500Error'
+
+import { createsuccessfully } from '../../handleHttpResponses/201createsuccessfully'
+
+export class DeliverAddressPresentation implements ControllerProtocol {
+  private readonly fields = ['cartId', 'address']
+  private readonly addressFields = ['street', 'number', 'neighborhood', 'postalCode', 'city', 'state']
+
+  constructor (private readonly DeliveryAddress: DeliveryAddressDomain) {}
+
+  async handle (request: httpRequest): Promise<httpResponse> {
+    try {
+      const { body } = request
+      for (const key of this.fields) {
+        if (!body[key]) return error400(`Field ${key} is required`)
+      }
+      for (const key of this.addressFields) {
+        if (!body.address[key]) return error400(`Address field ${key} is required`)
+      }
+      const result = await this.DeliveryAddress.perform(body)
+      return createsuccessfully<DeliveryAddressDomain.result>(result)
+    } catch (error) {
+      return error500((error as Error).message)
+    }
+  }
+}

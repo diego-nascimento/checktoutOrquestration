@@ -40,7 +40,6 @@ describe('SaveCheckoutPresentation tests', () => {
   it('Deve retornar erro 400 com mensagem correta se cartId não for enviado', async () => {
     const result = await sut.handle({
       body: {
-
       }
     })
 
