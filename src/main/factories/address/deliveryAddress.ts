@@ -1,4 +1,4 @@
-import { DeliveryAddressData } from 'data/services/checkout/deliveryAddress'
+import { DeliveryAddressData } from '@/data/services/address/deliveryAddress'
 
 import { CheckIsInProgressDeliveryAddress } from '@/infra/mockedServices/checkoutObjects/checkIsInProgressDeliveryAddress'
 import { SaveCheckoutObject } from 'infra/mockedServices/checkoutObjects/save'

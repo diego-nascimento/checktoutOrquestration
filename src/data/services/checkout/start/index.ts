@@ -18,6 +18,6 @@ export class StartCheckoutData implements StartCheckoutDomain {
     const cart = await this.findCartInfra.perform(data)
     if (!cart) return null
     const checkoutObject = new CheckoutObjectDTO({ cart })
-    return this.saveCheckout.perform({ checkoutObject: checkoutObject.getJSON() })
+    return await this.saveCheckout.perform({ checkoutObject: checkoutObject.getJSON() })
   }
 }

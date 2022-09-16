@@ -48,16 +48,20 @@ export class CheckoutObjectDTO {
     return !data.deliveryAddress
   }
 
-  private isDeliveryMethodState (data: constructorParams) {
-    return !data.deliveryMethod
-  }
-
   private isPaymentState (data: constructorParams) {
     return data.deliveryMethod && !data.paymentMethod
   }
 
   private checkoutIsReady (data: constructorParams):boolean {
     return !!(data.cart && data.deliveryAddress && data.deliveryMethod && data.paymentMethod)
+  }
+
+  private isDeliveryMethodState (data: constructorParams) {
+    return data.deliveryMethod
+  }
+
+  checkIsDeliveryMethod () {
+    return this.checkout.state === 'delivery'
   }
 
   getJSON () {
