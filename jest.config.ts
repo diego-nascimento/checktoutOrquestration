@@ -6,8 +6,7 @@ export default {
   coverageProvider: 'v8',
   roots: ['<rootDir>/src'],
   transform: {
-    '\\.ts': 'ts-jest'
+    '^.+\\.(t|j)sx?$': ['@swc/jest']
   },
-  preset: 'ts-jest',
   moduleDirectories: ['node_modules', 'src']
 }
