@@ -3,17 +3,29 @@ services:
   app:
     restart: always 
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ./app
+      dockerfile: Dockerfile.dev
     ports:
       - "8081:8081"
     container_name: app
     tty: true
-    entrypoint: npm run start
+    volumes:
+      - ./app:/app
     networks:
       - app-sql
-    depends_on:
-      - db
+  cart-service:
+    restart: always
+    build:
+      context: ./cartService
+      dockerfile: Dockerfile
+    ports:
+      - '8082:8082'
+    expose:
+      - 8082
+    container_name: cart-service
+    tty: true
+    volumes:
+      - ./cartService:/app
   db:
     image: postgres
     restart: always
