@@ -35,7 +35,7 @@ services:
     networks:
       - app-sql
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./postgres:/var/lib/postgres
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: checkout
